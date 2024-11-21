@@ -9,7 +9,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 
 body{
    font-family: 'Arial';
-   background: url('Designer.png') center/cover no-repeat;
+   background: url('src/img/bakground-img.png') center/cover no-repeat;
    margin: 0;
    padding: 0;
    height: 100vh;
