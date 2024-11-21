@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Busqueda del usuario no logueado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Styles.css">
+    </head>
+    
+    <body>
+        
+        <div class="form-container">
+            <h1>Buscar Personas</h1>
+            <form>
+                <div class="form-container--sexo">
+                    <h4>Eliga el sexo</h4>
+                    <select>
+                        <option value="" disabled selected>Seleccine una opcion</option>
+                        <option value="hombre-mujer">Soy hombre y busco mujer</option>
+                        <option value="hombre-hombre">Soy hombre y busco hombre</option>
+                        <option value="mujer-hombre">Soy mujer y busco hombre</option>
+                        <option value="mujer-mujer">Soy mujer y busco mujer</option>
+                        <option value="hombre-ambos">Soy hombre y busco ambos</option>
+                        <option value="mujer-ambos">Soy mujer y busco ambos</option>
+                    </select>
+                </div>
+                
+                <div class="form-container--edad">
+                    <h4>Eliga la edad</h4>
+                    <div class="edad-container">
+                        <input type="number" min="18" placeholder="minima">
+                        <p>-</p>
+                        <input type="number" min="18" placeholder="minima">
+                    </div>
+                </div>
+                
+                <div class="form-container--ciudad">
+                    <h4>Eliga la ciudad</h4>
+                    <select>
+                        <option value="" disabled selected>Seleccine una opcion</option>
+                        <option value="bilbao">Bilbao</option>
+                        <option value="vitoria">Vitoria</option>
+                        <option value="san-sebastian">San Sebastian</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="btn">Buscar</button>
+            </form>
+        </div>
+        
+    </body>
+</html>

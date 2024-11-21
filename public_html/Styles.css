@@ -1,0 +1,90 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 20 nov 2024, 23:42:04
+    Author     : Yerai
+*/
+
+body{
+   font-family: 'Arial';
+   background: url('Designer.png') center/cover no-repeat;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.form-container{
+    background: radial-gradient(circle, rgba(255,217,217,1) 35%, rgba(255,241,241,1) 100%);
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 2px solid #ff7171;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+}
+
+h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.form-container--sexo{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-container--ciudad{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-container--edad{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.edad-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.edad-container p{
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+select{
+    cursor: pointer;
+}
+
+select, 
+input{
+    border-color: #ff7171;
+    outline: #ff7171;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff7171;
+    border-radius: 15px;
+    font-size: 15px
+}
+
+.btn{
+    background: #ff7171;
+    border-color: #ff7171;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border: 3px solid #ff7171;
+}
