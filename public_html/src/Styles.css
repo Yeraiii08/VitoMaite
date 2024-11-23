@@ -1,6 +1,6 @@
 body{
    font-family: 'Arial';
-   background: url('Designer.png') center/cover no-repeat;
+   background: url('img/Designer.png') center/cover no-repeat;
    margin: 0;
    padding: 0;
    height: 100vh;
@@ -77,17 +77,11 @@ h1{
     color: black;
 }
 
-.form-container--sexo{
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.form-container--ciudad{
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.form-container--edad{
+.form-container--sexo,
+.form-container--ciudad,
+.form-container--edad,
+.form-container--usuario,
+.form-container--contrasena{
     text-align: left;
     margin-bottom: 20px;
 }
