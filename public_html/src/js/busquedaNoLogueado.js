@@ -19,4 +19,7 @@ btn.addEventListener("click", function(event){
     if(sexo === "" || edadMin === "" || edadMax === "" || ciudad === ""){
         alert("algunos campos estan si rellenar");
     }
+    else{
+        window.location.href = "resultadosBusquedaNoLogueado.html";
+    }
 });
