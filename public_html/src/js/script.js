@@ -152,8 +152,7 @@ function Comenzar(evento){
             edad: 24,
             foto: "kkk",
             genero: "Hombre"
-        });
-        
+        });    
     }
     
     if(!comprobarSiEstaVacia("aficion")){
