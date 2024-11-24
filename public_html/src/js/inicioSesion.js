@@ -1,8 +1,3 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
- */
-
 const boton = document.getElementById("boton-inicioSesion");
 boton.addEventListener("click", function(event){
     const usuario = document.getElementById("nombre").value;
@@ -41,6 +36,7 @@ function verificarValoresIntroducidos(usuario, password){
                 const passwordUsuario = usuarioIntroducido.password;
                 if(passwordUsuario === password){
                     console.log("Inicio de sesion correcto");
+                    localStorage.setItem("nombreUsuario", usuarioIntroducido.nombre);
                     window.location.href = "BusquedaLogueado.html";
                 }
                 else{
