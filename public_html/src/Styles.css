@@ -125,3 +125,21 @@ input{
 .btn:hover{
     background-color: #E66060;
 }
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-container input{
+    width: 20%;
+}
+
+.checkbox-container input:hover{
+    cursor: pointer;
+}
+
+.boton-aficiones{
+    margin-top: 10px;
+}
