@@ -20,6 +20,60 @@ btn.addEventListener("click", function(event){
         alert("algunos campos estan si rellenar");
     }
     else{
-        window.location.href = "resultadosBusquedaNoLogueado.html";
+        
+        const solicitudBD = indexedDB.open("Base-De-Datos", 2);
+        
+        var resultado = [];
+        
+        solicitudBD.onsuccess = function (event){
+            const bd = event.target.result;
+           
+            const transaccion = bd.transaction(["usuario"], "readonly");
+            const almacen = transaccion.objectStore("usuario");
+        
+            const solicitud = almacen.openCursor();
+        
+            solicitud.onsuccess = function (event){
+                const cursor = event.target.result;
+            
+                if(cursor){
+                    const usuario = cursor.value;
+                
+                    var seCumpleSexo = false;
+                    var seCumpleEdad = false;
+                    var seCumpleCiudad = false;
+                
+                    //comprobacion del sexo
+                    if(sexo === "Ambos"){
+                        seCumpleSexo = true;
+                    }
+                    else if(sexo === usuario.genero){
+                        seCumpleSexo = true;
+                    }
+                
+                    //comprobacion de la edad
+                    if(usuario.edad >= edadMin && usuario.edad <= edadMax){
+                        seCumpleEdad = true;
+                    }
+                
+                    //comprobacion de la ciudad
+                    if(ciudad === usuario.ciudad){
+                        seCumpleCiudad = true;
+                    }
+                
+                    //Comprobacion de que coincidan todos los parametros de busqueda
+                    if(seCumpleCiudad && seCumpleEdad && seCumpleSexo){
+                        resultado.push(usuario);
+                    }
+                
+                    cursor.continue();
+                }else{
+                    localStorage.setItem("resultadosBusqueda", JSON.stringify(resultado));
+                    window.location.href = "resultadosBusquedaNoLogueado.html";
+                }
+            
+                
+            };
+        };
     }
 });

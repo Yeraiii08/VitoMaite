@@ -172,6 +172,12 @@ input{
     box-sizing: border-box;
     border-radius: 15px;
     background: radial-gradient(circle, rgba(255,217,217,1) 35%, rgba(255,241,241,1) 100%);
+    visibility: hidden;
+}
+
+.content-resultNoLogueado--hijo:hover{
+    cursor: pointer;
+    background: #ff7171;
 }
 
 .informacionPersona-container{
