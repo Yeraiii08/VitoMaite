@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../Styles.css">
-        <script src="../js/busquedaLogueado.js"></script>
     </head>
     
     <body>
@@ -28,37 +27,37 @@
             <form>
                 <div class="form-container--sexo">
                     <h4>Eliga el sexo</h4>
-                    <select>
+                    <select id="sexo">
                         <option value="" disabled selected>Seleccine una opción</option>
-                        <option value="hombre-mujer">Soy hombre y busco mujer</option>
-                        <option value="hombre-hombre">Soy hombre y busco hombre</option>
-                        <option value="mujer-hombre">Soy mujer y busco hombre</option>
-                        <option value="mujer-mujer">Soy mujer y busco mujer</option>
-                        <option value="hombre-ambos">Soy hombre y busco ambos</option>
-                        <option value="mujer-ambos">Soy mujer y busco ambos</option>
+                        <option value="Mujer">Soy hombre y busco mujer</option>
+                        <option value="Hombre">Soy hombre y busco hombre</option>
+                        <option value="Hombre">Soy mujer y busco hombre</option>
+                        <option value="Mujer">Soy mujer y busco mujer</option>
+                        <option value="Ambos">Soy hombre y busco ambos</option>
+                        <option value="Ambos">Soy mujer y busco ambos</option>
                     </select>
                 </div>
                 
                 <div class="form-container--edad">
                     <h4>Eliga la edad</h4>
                     <div class="edad-container">
-                        <input type="number" min="18" placeholder="Mínima">
+                        <input id="edad-min" type="number" min="18" placeholder="Mínima">
                         <p>-</p>
-                        <input type="number" min="18" placeholder="Máxima">
+                        <input id="edad-max" type="number" min="18" placeholder="Máxima">
                     </div>
                 </div>
                 
                 <div class="form-container--ciudad">
                     <h4>Eliga la ciudad</h4>
-                    <select>
+                    <select id="ciudad">
                         <option value="" disabled selected>Seleccine una opción</option>
-                        <option value="bilbao">Bilbao</option>
-                        <option value="vitoria">Vitoria</option>
-                        <option value="san-sebastian">San Sebastian</option>
+                        <option value="Bilbao">Bilbao</option>
+                        <option value="Vitoria-Gasteiz">Vitoria</option>
+                        <option value="Donosti">San Sebastian</option>
                     </select>
                 </div>
                 
-                <button type="button" class="btn">Buscar</button>
+                <button type="button" class="btn" id="boton-busquedaLogueado">Buscar</button>
             </form>
         </div>
         </div>

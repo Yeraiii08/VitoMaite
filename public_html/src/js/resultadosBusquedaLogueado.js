@@ -9,24 +9,18 @@ const btnNuevaPagina = document.getElementById("btn-siguientePagina");
 const perfiles = document.getElementsByClassName("content-resultNoLogueado--hijo");
 const cantPerfiles = perfiles.length;
 
-const fotosPerfiles = document.getElementsByClassName("fotoPerfil");
-for(i=0; i<fotosPerfiles.length; i++){
-    console.log(fotosPerfiles[i]);
-    fotosPerfiles[i].style.filter = "blur(12px)";
-}
-
 for(i=0; i<cantPerfiles; i++){
     perfiles[i].addEventListener("click", function(event){
-        alert("Registrate para ver mas informacion de los perfiles");
+        window.location.href = "informacionPerfil.html";
     });
 }
 
 btnNuevaBusqueda.addEventListener("click", function(event){
-   window.location.href = "BusquedaNoLogueado.html"; 
+   window.location.href = "BusquedaLogueado.html"; 
 });
 
 btnNuevaPagina.addEventListener("click", function(event){
-   alert("Registrate para ver mas perfiles");
+   alert("cargando nueva pagina...");
 });
 
 const resultBusqueda = JSON.parse(localStorage.getItem("resultadosBusqueda"));
@@ -54,7 +48,6 @@ else{
 }
 
 function crearResultado(numero){
-    
     var hijo = document.getElementById("hijo-" + (numero+1));
     
     console.log("hijo de la i = " + numero + ": " + hijo);
@@ -76,4 +69,3 @@ function crearResultado(numero){
     edad.innerHTML = "Edad: " + resultBusqueda[numero].edad;
     ciudad.innerHTML = "Ciudad: " + resultBusqueda[numero].ciudad;
 }
-
