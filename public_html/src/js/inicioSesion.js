@@ -38,6 +38,7 @@ function verificarValoresIntroducidos(usuario, password){
                     console.log("Inicio de sesion correcto");
                     localStorage.setItem("nombreUsuario", usuarioIntroducido.nombre);
                     localStorage.setItem("emailUsuario", usuarioIntroducido.email);
+                    localStorage.setItem("ciudadUsuario", usuarioIntroducido.ciudad);
                     window.location.href = "BusquedaLogueado.html";
                 }
                 else{
