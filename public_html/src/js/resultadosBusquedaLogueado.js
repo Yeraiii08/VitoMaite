@@ -9,6 +9,16 @@ const btnNuevaPagina = document.getElementById("btn-siguientePagina");
 const perfiles = document.getElementsByClassName("content-resultNoLogueado--hijo");
 const cantPerfiles = perfiles.length;
 
+const resultBusqueda = JSON.parse(localStorage.getItem("resultadosBusqueda"));
+
+console.log("resultado de la busqueda: " + resultBusqueda);
+
+const longitudBusqueda = resultBusqueda.length;
+
+console.log("longitud de la busqueda: " + longitudBusqueda);
+
+var numPagina = 1;
+
 for(i=0; i<cantPerfiles; i++){
     perfiles[i].addEventListener("click", function(event){
         window.location.href = "informacionPerfil.html";
@@ -20,23 +30,23 @@ btnNuevaBusqueda.addEventListener("click", function(event){
 });
 
 btnNuevaPagina.addEventListener("click", function(event){
-   alert("cargando nueva pagina...");
+   if(longitudBusqueda <= 12){
+       alert("No hay existen mas perfiles con esas caracteristicas")
+   }
+   else{
+       numPagina++;
+   }
 });
 
-const resultBusqueda = JSON.parse(localStorage.getItem("resultadosBusqueda"));
 
-console.log("resultado de la busqueda: " + resultBusqueda);
 
-const longitudBusqueda = resultBusqueda.length;
-
-console.log("longitud de la busqueda: " + longitudBusqueda);
 
 if(longitudBusqueda === 0){
     alert("No se han encontrado personas con esas caracteristicas");
 }
 else{
     
-    for(i=0; i<12; i++){
+    for(i=12*numPagina - 12; i<12*numPagina; i++){
         
         console.log("iterador: " + i);
         
