@@ -37,6 +37,7 @@ function verificarValoresIntroducidos(usuario, password){
                 if(passwordUsuario === password){
                     console.log("Inicio de sesion correcto");
                     localStorage.setItem("nombreUsuario", usuarioIntroducido.nombre);
+                    localStorage.setItem("emailUsuario", usuarioIntroducido.email);
                     window.location.href = "BusquedaLogueado.html";
                 }
                 else{
