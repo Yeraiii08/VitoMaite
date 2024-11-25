@@ -1,6 +1,6 @@
 //2
-const ciudadUsuario = sessionStorage.getItem("ciudadUsuario");
-const nombreUsuario = sessionStorage.getItem("nombreUsuario");
+const ciudadUsuario = JSON.parse(sessionStorage.getItem("email")).ciudad;
+const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
 
 document.addEventListener("DOMContentLoaded", function () {
     

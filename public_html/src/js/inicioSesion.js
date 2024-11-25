@@ -62,7 +62,7 @@ function verificarValoresIntroducidos(usuario, password){
                         genero: genero
                     };
                     
-                    sessionStorage.setItem(email, datos);
+                    sessionStorage.setItem("email", JSON.stringify(datos));
                     
                     window.location.href = "BusquedaLogueado.html";
                 }

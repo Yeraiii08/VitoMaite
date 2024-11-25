@@ -1,4 +1,4 @@
-//2
+
 
 
 const boton = document.getElementById("boton-busquedaLogueado");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         const saludoUsuario = document.getElementById("saludoUsuario");
         
-        const nombreUsuario = sessionStorage.getItem("nombreUsuario");
+        const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;

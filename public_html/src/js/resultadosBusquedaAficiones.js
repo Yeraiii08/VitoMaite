@@ -20,11 +20,11 @@ console.log("longitud de la busqueda: " + longitudBusqueda);
 
 var numPagina = 1;
 
-const emailUsuario = sessionStorage.getItem("emailUsuario");
+const emailUsuario = JSON.parse(sessionStorage.getItem("email")).email;
 
 document.addEventListener("DOMContentLoaded", function () {
         const saludoUsuario = document.getElementById("saludoUsuario");
-        const nombreUsuario = sessionStorage.getItem("nombreUsuario");
+        const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;
