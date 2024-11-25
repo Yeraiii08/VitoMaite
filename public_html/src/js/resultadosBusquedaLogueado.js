@@ -19,6 +19,19 @@ console.log("longitud de la busqueda: " + longitudBusqueda);
 
 var numPagina = 1;
 
+const emailUsuario = localStorage.getItem("emailUsuario");
+
+document.addEventListener("DOMContentLoaded", function () {
+        const saludoUsuario = document.getElementById("saludoUsuario");
+        const nombreUsuario = localStorage.getItem("nombreUsuario");
+
+        if (nombreUsuario) {
+            saludoUsuario.textContent = `Hola, ${nombreUsuario}`;
+        } else {
+            saludoUsuario.textContent = "";
+        }
+});
+
 for(i=0; i<cantPerfiles; i++){
     perfiles[i].addEventListener("click", function(event){
         window.location.href = "informacionPerfil.html";
