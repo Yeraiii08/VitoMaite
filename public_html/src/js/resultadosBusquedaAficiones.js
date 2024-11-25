@@ -26,7 +26,7 @@ for(i=0; i<cantPerfiles; i++){
 }
 
 btnNuevaBusqueda.addEventListener("click", function(event){
-   window.location.href = "BusquedaLogueado.html"; 
+   window.location.href = "BusquedaPorAficiones.html"; 
 });
 
 btnNuevaPagina.addEventListener("click", function(event){
