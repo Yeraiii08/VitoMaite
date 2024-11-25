@@ -1,10 +1,17 @@
+//2
+
+
 const boton = document.getElementById("boton-busquedaLogueado");
 
 console.log(boton);
 
 document.addEventListener("DOMContentLoaded", function () {
+    
+        sessionStorage.removeItem("resultadosBusqueda");
+    
         const saludoUsuario = document.getElementById("saludoUsuario");
-        const nombreUsuario = localStorage.getItem("nombreUsuario");
+        
+        const nombreUsuario = sessionStorage.getItem("nombreUsuario");
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;
@@ -88,7 +95,7 @@ boton.addEventListener("click", function(event){
                     cursor.continue();
                 }else{
                     console.log(resultado);
-                    localStorage.setItem("resultadosBusqueda", JSON.stringify(resultado));
+                    sessionStorage.setItem("resultadosBusqueda", JSON.stringify(resultado));
                     window.location.href = "resultadosBusquedaLogueado.html";
                 }
             
