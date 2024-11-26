@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Modificar Perfil</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../Styles.css" >
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                <img src="../img/logoCorazon.png" width="50" height="50" alt="Logo VitoMaite">
+                <p class="logoTexto">VitoMaite</p>
+            </a>
+            <span id="saludoUsuario" class="saludo"></span>
+            <nav>
+                <a href="miPerfil.html">Mi Perfil</a>
+                <a href="BusquedaLogueado.html">Busqueda General</a>
+                <a href="VerMisLikes.html">Ver mis Likes</a>
+                <a href="Iniciar.html">Log out</a>
+            </nav>
+        </header>
+        <div class="container">
+        <h1>Modificar Perfil</h1>
+        <form id="perfilForm">
+            <label for="imagen">Foto de Perfil:</label>
+            <div id="dropArea">
+                <p>Arrastra una foto aquí o haz clic para subir</p>
+                <input type="file" id="imagen" accept="image/*">
+            </div>
+            <img id="preview" src="" alt="Previsualización" style="display:none; width: 150px; height: 150px; border-radius: 50%; margin-top: 10px;">
+            <br><br>
+            <label for="ciudad">Ciudad:</label>
+            <br>
+            <input type="text" id="ciudad" placeholder="Escribe tu ciudad">
+            <br><br>
+            <button id="button" type="button">Guardar Cambios </button>
+        </form>
+        </div>
+        <script src="../js/modificarPerfil.js"></script>
+    </body>
+</html>

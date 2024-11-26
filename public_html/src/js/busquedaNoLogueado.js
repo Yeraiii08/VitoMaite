@@ -27,7 +27,7 @@ btn.addEventListener("click", function(event){
     }
     else{
         
-        const solicitudBD = indexedDB.open("Base-De-Datos", 2);
+        const solicitudBD = indexedDB.open("Base-De-Datos", 3);
         
         var resultado = [];
         

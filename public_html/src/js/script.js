@@ -1,7 +1,7 @@
 var bd;
 
 function IniciarBaseDatos(){
-    var solicitud = indexedDB.open("Base-De-Datos", 2);
+    var solicitud = indexedDB.open("Base-De-Datos", 3);
     
     solicitud.addEventListener("error", MostrarError);
     solicitud.addEventListener("success", Comenzar);
@@ -150,7 +150,7 @@ function Comenzar(evento){
             nombre: "jon",
             ciudad: "Donosti",
             edad: 24,
-            foto: "../img/chico6.jpg",
+            foto: "../img/chico6.png",
             genero: "Hombre"
         });
     }

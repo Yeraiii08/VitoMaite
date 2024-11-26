@@ -7,10 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
         sessionStorage.removeItem("resultadosBusqueda");
     
         const saludoUsuario = document.getElementById("saludoUsuario");
+        const imagenPerfil = document.getElementById("imagen-perfil");
+        
         const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
+        const fotoUsuario = JSON.parse(sessionStorage.getItem("email")).foto;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;
+            imagenPerfil.src = fotoUsuario;
         } else {
             saludoUsuario.textContent = "";
         }
@@ -30,7 +34,7 @@ btn.addEventListener("click", function(event){
     console.log("aficiones seleccionadas:");
     console.log(aficionesSeleccionadas);
    
-    const solicitudBD = indexedDB.open("Base-De-Datos", 2);
+    const solicitudBD = indexedDB.open("Base-De-Datos", 3);
    
     var idAficionesSeleccionadas = [];
     

@@ -66,6 +66,7 @@ function crearResultado(numero){
     var sexo = document.getElementById("hijo" + (numero+1) + "-sexo");
     var edad = document.getElementById("hijo" + (numero+1) + "-edad");
     var ciudad = document.getElementById("hijo" + (numero+1) + "-ciudad");
+    var foto = document.getElementById("hijo" + (numero+1) + "-foto");
     
     console.log(resultBusqueda[numero].nombre);
     console.log(nombre);
@@ -76,5 +77,6 @@ function crearResultado(numero){
     sexo.innerHTML = "Sexo: " + resultBusqueda[numero].genero;
     edad.innerHTML = "Edad: " + resultBusqueda[numero].edad;
     ciudad.innerHTML = "Ciudad: " + resultBusqueda[numero].ciudad;
+    foto.src = resultBusqueda[numero].foto;
 }
 

@@ -8,10 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         sessionStorage.removeItem("resultadosBusqueda");
     
         const saludoUsuario = document.getElementById("saludoUsuario");
+        const imagenPerfil = document.getElementById("imagen-perfil");
+        
         const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
+        const fotoUsuario = JSON.parse(sessionStorage.getItem("email")).foto;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;
+            imagenPerfil.src = fotoUsuario;
         } else {
             saludoUsuario.textContent = "";
         }
@@ -23,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function cargarLikes(){
     
-    const solicitudBD = indexedDB.open("Base-De-Datos", 2);
+    const solicitudBD = indexedDB.open("Base-De-Datos", 3);
     solicitudBD.onsuccess = function (event){
         const bd = event.target.result;
         
@@ -97,6 +101,7 @@ function cargarLikes(){
                                     var sexo = document.getElementById("hijo" + (i+1) + "-sexo");
                                     var edad = document.getElementById("hijo" + (i+1) + "-edad");
                                     var ciudad = document.getElementById("hijo" + (i+1) + "-ciudad");
+                                    var foto = document.getElementById("hijo" + (i+1) + "-foto");
     
                                     console.log(resultado[i].nombre);
                                     console.log(nombre);
@@ -107,6 +112,8 @@ function cargarLikes(){
                                     sexo.innerHTML = "Sexo: " + resultado[i].genero;
                                     edad.innerHTML = "Edad: " + resultado[i].edad;
                                     ciudad.innerHTML = "Ciudad: " + resultado[i].ciudad;  
+                                    console.log("Enlace: " + resultado[i].foto);
+                                    foto.src = resultado[i].foto; 
                                 }
                             }
                         }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Gestión de Aficiones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../Styles.css" >
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                <img src="../img/logoCorazon.png" width="50" height="50" alt="Logo VitoMaite">
+                <p class="logoTexto">VitoMaite</p>
+            </a>
+            <span id="saludoUsuario" class="saludo"></span>
+            <nav>
+                <a href="miPerfil.html">Ver mi perfil</a>
+                <a href="BusquedaLogueado.html">Busqueda General</a>
+                <a href="VerMisLikes.html">Ver mis Likes</a>
+                <a href="Iniciar.html">Log out</a>
+            </nav>
+        </header>
+        <div class="container">
+            <h1>Gestión de Aficiones</h1>
+            <div class="actions">
+                <button id="verAficiones">Ver Aficiones</button>
+                <button id="añadirAficiones">Añadir Aficiones</button>
+                <button id="eliminarAficiones">Eliminar Aficiones</button>
+            </div>
+            <div id="resultado" class="result"></div>
+        </div>
+        <script src="../js/gestionarAficiones.js"></script>
+    </body>
+</html>

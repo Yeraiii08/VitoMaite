@@ -6,7 +6,6 @@ body{
    height: 100vh;
 }
 
-
 .logo{
     display: flex;
     align-items: center;
@@ -58,6 +57,12 @@ nav a{
 
 nav a:hover{
     color: white;
+}
+
+#imagen-perfil{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%
 }
 
 .content{
