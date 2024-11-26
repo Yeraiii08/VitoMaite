@@ -70,16 +70,18 @@ function cargarUsuarios(){
                                     var sexo = document.getElementById("hijo" + (i+1) + "-sexo");
                                     var edad = document.getElementById("hijo" + (i+1) + "-edad");
                                     var ciudad = document.getElementById("hijo" + (i+1) + "-ciudad");
+                                    var foto = document.getElementById("hijo" + (i+1) + "-foto");
     
                                     console.log(resultado[i].nombre);
                                     console.log(nombre);
     
-    
+                                            
     
                                     nombre.innerHTML = "Nombre: " + resultado[i].nombre;
                                     sexo.innerHTML = "Sexo: " + resultado[i].genero;
                                     edad.innerHTML = "Edad: " + resultado[i].edad;
                                     ciudad.innerHTML = "Ciudad: " + resultado[i].ciudad;  
+                                    foto.src = resultado[i].foto;
                                 }
                             }
                 }

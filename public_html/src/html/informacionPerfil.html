@@ -5,11 +5,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Mas informacion</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/informacionPerfil.js"></script>
+        <link rel="stylesheet" href="../Styles.css">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2g8VwDziiyQXmv7gzzUA1QGNwgO-3NSI&callback=initMap" async defer></script>
     </head>
     <body>
-        <div></div>
+        <header>
+            <a href="#" class="logo">
+                <img src="../img/logoCorazon.png" width="50" height="50" alt="Logo VitoMaite">
+                <p class="logoTexto">VitoMaite</p>
+            </a>
+            <span id="saludoUsuario" class="saludo"></span>
+            <nav>
+                <a href="BusquedaPorAficiones.html">Busqueda por Aficiones</a>
+                <a href="VerMisLikes.html">Ver mis Likes</a>
+                <a href="BusquedaPorLocalizacion.html">Por Localización</a>
+                <a href="Iniciar.html">Log out</a>
+            </nav>
+        </header>
+        <main>
+           <div id="mapa"></div>
+        </main>  
+        <script src="../js/informacionPerfil.js"></script>
     </body>
 </html>
