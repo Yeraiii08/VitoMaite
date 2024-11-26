@@ -247,3 +247,47 @@ input{
 .btn-siguientePagina{
     margin-left: 100px;
 }
+
+.container-gestionarAficiones {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    background: radial-gradient(circle, rgba(255,217,217,1) 35%, rgba(255,241,241,1) 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.h1-gestionarAficiones {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.button-container-gestionarAficiones {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.button-gestionarAficiones {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-gestionarAficiones:hover {
+    background-color: #0056b3;
+}
+
+.output-gestionarAficiones {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
