@@ -62,21 +62,21 @@ const solicitudBD = indexedDB.open("Base-De-Datos", 3);
                     
                             const aficion = cursor2.value;
                 
-                            for(i=0; i<idResultado.length; i++){
+                            for(let i=0; i<idResultado.length; i++){
                                 if(idResultado[i] === aficion.idAficion){
                                     tieneAficiones.push(aficion.aficion);
                                 }
                                 else{
                                     var encontrado = false;
-                                    for(i=0; i<noTieneAficiones.length; i++){
-                                        if(noTieneAficiones[i] === aficion.aficion){
+                                    for(let j=0; j<noTieneAficiones.length; j++){
+                                        if(noTieneAficiones[j] === aficion.aficion){
                                             encontrado = true;
                                         }
                                     }
                                     if(!encontrado){
                                         var encontrado2 = false;
-                                        for(i=0; i<tieneAficiones.length; i++){
-                                            if(tieneAficiones[i] === aficion.aficion){
+                                        for(let j=0; j<tieneAficiones.length; j++){
+                                            if(tieneAficiones[j] === aficion.aficion){
                                                 encontrado2 = true;
                                             }
                                         }
