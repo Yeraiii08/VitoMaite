@@ -1,8 +1,13 @@
+
+//2
 const btn = document.getElementById("boton-busquedaAficiones");
 
 document.addEventListener("DOMContentLoaded", function () {
+        
+        sessionStorage.removeItem("resultadosBusqueda");
+    
         const saludoUsuario = document.getElementById("saludoUsuario");
-        const nombreUsuario = localStorage.getItem("nombreUsuario");
+        const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;
@@ -133,7 +138,7 @@ btn.addEventListener("click", function(event){
                             }
                             else{
                                 console.log("5");
-                                localStorage.setItem("resultadosBusqueda", JSON.stringify(resultado));
+                                sessionStorage.setItem("resultadosBusqueda", JSON.stringify(resultado));
                                 window.location.href = "resultadosBusquedaAficiones.html";
                             }
                         };

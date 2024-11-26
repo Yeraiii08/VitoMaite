@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
+//1
 const btnNuevaBusqueda = document.getElementById("btn-cambioBusqueda");
 const btnNuevaPagina = document.getElementById("btn-siguientePagina");
 
@@ -29,7 +30,7 @@ btnNuevaPagina.addEventListener("click", function(event){
    alert("Registrate para ver mas perfiles");
 });
 
-const resultBusqueda = JSON.parse(localStorage.getItem("resultadosBusqueda"));
+const resultBusqueda = JSON.parse(sessionStorage.getItem("resultadosBusqueda"));
 
 console.log("resultado de la busqueda: " + resultBusqueda);
 

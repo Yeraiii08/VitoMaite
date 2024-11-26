@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
+//1
+
+document.addEventListener("DOMContentLoaded", function () {
+    sessionStorage.removeItem("resultadosBusqueda");
+});
+
 const btn = document.getElementById("boton-busquedaNoLogueado");
 
 btn.addEventListener("click", function(event){
@@ -68,7 +74,7 @@ btn.addEventListener("click", function(event){
                 
                     cursor.continue();
                 }else{
-                    localStorage.setItem("resultadosBusqueda", JSON.stringify(resultado));
+                    sessionStorage.setItem("resultadosBusqueda", JSON.stringify(resultado));
                     window.location.href = "resultadosBusquedaNoLogueado.html";
                 }
             

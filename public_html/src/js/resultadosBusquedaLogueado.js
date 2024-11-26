@@ -3,13 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
+//3
 const btnNuevaBusqueda = document.getElementById("btn-cambioBusqueda");
 const btnNuevaPagina = document.getElementById("btn-siguientePagina");
 
 const perfiles = document.getElementsByClassName("content-resultNoLogueado--hijo");
 const cantPerfiles = perfiles.length;
 
-const resultBusqueda = JSON.parse(localStorage.getItem("resultadosBusqueda"));
+const resultBusqueda = JSON.parse(sessionStorage.getItem("resultadosBusqueda"));
 
 console.log("resultado de la busqueda: " + resultBusqueda);
 
@@ -19,11 +20,11 @@ console.log("longitud de la busqueda: " + longitudBusqueda);
 
 var numPagina = 1;
 
-const emailUsuario = localStorage.getItem("emailUsuario");
+const emailUsuario = JSON.parse(sessionStorage.getItem("email")).email;
 
 document.addEventListener("DOMContentLoaded", function () {
         const saludoUsuario = document.getElementById("saludoUsuario");
-        const nombreUsuario = localStorage.getItem("nombreUsuario");
+        const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;

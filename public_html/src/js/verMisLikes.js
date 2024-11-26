@@ -1,9 +1,14 @@
+
+//3
 var resultado = [];
-const emailUsuario = localStorage.getItem("emailUsuario");
+const emailUsuario = JSON.parse(sessionStorage.getItem("email")).email;
 
 document.addEventListener("DOMContentLoaded", function () {
+    
+        sessionStorage.removeItem("resultadosBusqueda");
+    
         const saludoUsuario = document.getElementById("saludoUsuario");
-        const nombreUsuario = localStorage.getItem("nombreUsuario");
+        const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;

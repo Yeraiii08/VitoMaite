@@ -1,7 +1,11 @@
-const ciudadUsuario = localStorage.getItem("ciudadUsuario");
-const nombreUsuario = localStorage.getItem("nombreUsuario");
+//2
+const ciudadUsuario = JSON.parse(sessionStorage.getItem("email")).ciudad;
+const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
 
 document.addEventListener("DOMContentLoaded", function () {
+    
+    sessionStorage.removeItem("resultadosBusqueda");
+    
     const saludoUsuario = document.getElementById("saludoUsuario");
 
     if (nombreUsuario) {
