@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
         const saludoUsuario = document.getElementById("saludoUsuario");
-        const nombreUsuario = localStorage.getItem("nombreUsuario");
+        const imagenPerfil = document.getElementById("imagen-perfil");
+        
+        const nombreUsuario = JSON.parse(sessionStorage.getItem("email")).nombre;
+        const fotoUsuario = JSON.parse(sessionStorage.getItem("email")).foto;
 
         if (nombreUsuario) {
             saludoUsuario.textContent = `Hola, ${nombreUsuario}`;
+            imagenPerfil.src = fotoUsuario;
         } else {
             saludoUsuario.textContent = "";
         }

@@ -1,6 +1,6 @@
 body{
    font-family: 'Arial';
-   background: url('img/Designer.png') center/cover no-repeat;
+   background: url('../img/Designer.png') center/cover no-repeat;
    margin: 0;
    padding: 0;
    height: 100vh;
@@ -292,8 +292,21 @@ input{
     background-color: #fdfdfd;
 }
 
+.misDatos-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.misDatos-container img{
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%
+}
+
 .container {
-    background-color: #fff;
+    background: radial-gradient(circle, rgba(255,217,217,1) 35%, rgba(255,241,241,1) 100%);
     border: 1px solid #ff7171;
     border-radius: 5px;
     min-width: fit-content;
