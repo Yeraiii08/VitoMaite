@@ -29,7 +29,7 @@ function Comenzar(evento){
             nombre: "Ana",
             ciudad: "Donosti",
             edad: 22,
-            foto: "aaa",
+            foto: "../img/chica1.jpg",
             genero: "Mujer"
         });
         
@@ -40,7 +40,7 @@ function Comenzar(evento){
             nombre: "Maria",
             ciudad: "Bilbao",
             edad: 29,
-            foto: "bbb",
+            foto: "../img/chica2.jpg",
             genero: "Mujer"
         });
         
@@ -51,7 +51,7 @@ function Comenzar(evento){
             nombre: "Miren",
             ciudad: "Vitoria-Gasteiz",
             edad: 36,
-            foto: "ccc",
+            foto: "../img/chica3.jpg",
             genero: "Mujer"
         });
         
@@ -62,7 +62,7 @@ function Comenzar(evento){
             nombre: "Carmen",
             ciudad: "Donosti",
             edad: 41,
-            foto: "ddd",
+            foto: "../img/chica4.jpg",
             genero: "Mujer"
         });
         
@@ -73,7 +73,7 @@ function Comenzar(evento){
             nombre: "June",
             ciudad: "Bilbao",
             edad: 19,
-            foto: "eee",
+            foto: "../img/chica5.jpg",
             genero: "Mujer"
         });
         
@@ -84,7 +84,7 @@ function Comenzar(evento){
             nombre: "Naroa",
             ciudad: "Vitoria-Gasteiz",
             edad: 44,
-            foto: "fff",
+            foto: "../img/chica6.jpg",
             genero: "Mujer"
         });
         
@@ -95,7 +95,7 @@ function Comenzar(evento){
             nombre: "Alex",
             ciudad: "Vitoria-Gasteiz",
             edad: 37,
-            foto: "eee",
+            foto: "../img/chico1.jpg",
             genero: "Hombre"
         });
         
@@ -106,7 +106,7 @@ function Comenzar(evento){
             nombre: "Yerai",
             ciudad: "Bilbao",
             edad: 20,
-            foto: "ggg",
+            foto: "../img/chico2.jpg",
             genero: "Hombre"
         });
         
@@ -117,7 +117,7 @@ function Comenzar(evento){
             nombre: "Mikel",
             ciudad: "Donosti",
             edad: 31,
-            foto: "hhh",
+            foto: "../img/chico3.jpg",
             genero: "Hombre"
         });
         
@@ -128,7 +128,7 @@ function Comenzar(evento){
             nombre: "Asier",
             ciudad: "Vitoria-Gasteiz",
             edad: 26,
-            foto: "ggg",
+            foto: "../img/chico4.jpg",
             genero: "Hombre"
         });
         
@@ -139,7 +139,7 @@ function Comenzar(evento){
             nombre: "Iker",
             ciudad: "Bilbao",
             edad: 41,
-            foto: "jjj",
+            foto: "../img/chico5.jpg",
             genero: "Hombre"
         });
         
@@ -150,7 +150,7 @@ function Comenzar(evento){
             nombre: "jon",
             ciudad: "Donosti",
             edad: 24,
-            foto: "kkk",
+            foto: "../img/chico6.jpg",
             genero: "Hombre"
         });
     }
