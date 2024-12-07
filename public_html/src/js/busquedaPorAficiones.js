@@ -45,6 +45,8 @@ btn.addEventListener("click", function(event){
    
     solicitudBD.onsuccess = function (event){
         const bd = event.target.result;
+        
+        const emailUsuario = JSON.parse(sessionStorage.getItem("email")).email;
        
         const transaccion = bd.transaction(["aficion"], "readonly");
         const almacen = transaccion.objectStore("aficion");
@@ -84,15 +86,18 @@ btn.addEventListener("click", function(event){
                 const solicitudCursor2 = almacen2.openCursor();
        
                 solicitudCursor2.onsuccess = function (event){
+                    
                     const cursor2 = event.target.result;
            
                     if(cursor2){
+                        
                         const usuarioAficion = cursor2.value;
                         
                         console.log("1");
                         
                         for(let i=0; i<idAficionesSeleccionadas.length; i++){
-                            if(idAficionesSeleccionadas[i] === usuarioAficion.idAficion){
+                            
+                            if(idAficionesSeleccionadas[i] === usuarioAficion.idAficion && usuarioAficion.email !== emailUsuario){
                         
                                 var emailUsuarioEncontrado = false;
                                 for(let i=0; i<emailsUsuariosBuscados.length; i++){

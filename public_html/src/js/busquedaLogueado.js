@@ -26,6 +26,8 @@ boton.addEventListener("click", function(event){
     const edadMax = document.getElementById("edad-max").value;
     const ciudad = document.getElementById("ciudad").value;
     
+    const emailUsuario = JSON.parse(sessionStorage.getItem("email")).email;
+    
     console.log(sexo);
     console.log(edadMin);
     console.log(edadMax);
@@ -83,8 +85,8 @@ boton.addEventListener("click", function(event){
                     }
                 
                     //Comprobacion de que coincidan todos los parametros de busqueda
-                    if(seCumpleCiudad && seCumpleEdad && seCumpleSexo){
-                        console.log("Entro en el if. Deberia hacer puesh a resultado")
+                    if(seCumpleCiudad && seCumpleEdad && seCumpleSexo && emailUsuario !== usuario.email){
+                        console.log("Entro en el if. Deberia hacer puesh a resultado");
                         resultado.push(usuario);
                         console.log(resultado);
                     }
